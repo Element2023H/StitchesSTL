@@ -1,6 +1,6 @@
 # StitchesSTL(缝合怪 Kernel STL版本)  
 
-中文 | [EN](.\README_EN.md)
+中文 | [EN](./README_EN.md)
 
 StitchesSTL 是[Stitches](https://github.com/Element2023H/Stitches) 版本的C++运行时库版本  
 
@@ -15,6 +15,6 @@ StitchesSTL 是[Stitches](https://github.com/Element2023H/Stitches) 版本的C++
 
 ### 感谢
 感谢好友 jacky(https://github.com/lzty)   
-感谢MeeSong（https://github.com/MiroKaku）  的项目[Musa.Runtime](https://github.com/MiroKaku/Musa.Runtime)
+感谢大佬 MeeSong（https://github.com/MiroKaku）  的项目[Musa.Runtime](https://github.com/MiroKaku/Musa.Runtime)
 
 
