@@ -2,6 +2,7 @@
 #include "Api.hpp"
 #include "Imports.hpp"
 
+constexpr ULONG GLOBALDATA_TAG = 'tdGS';
 
 struct GlobalData
 {

@@ -146,25 +146,39 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>.\Driver\;.\Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4748;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(ConfigurationName)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fltmgr.lib;fwpkclnt.lib;NetIO.lib;ndis.lib;ksecdd.lib;WDMSec.lib;UUID.lib;APCInjectLib.lib;%(AdditionalDependencies);$(KernelBufferOverflowLib);$(DDK_LIB_PATH)ntoskrnl.lib;$(DDK_LIB_PATH)hal.lib;$(DDK_LIB_PATH)wmilib.lib</AdditionalDependencies>
+      <AdditionalOptions>/integritycheck %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DriverEntry.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Api.hpp" />
-    <ClInclude Include="GlobalData.hpp" />
-    <ClInclude Include="Imports.hpp" />
-    <ClInclude Include="Lazy.hpp" />
-    <ClInclude Include="Locks.hpp" />
-    <ClInclude Include="New.hpp" />
-    <ClInclude Include="Once.hpp" />
+    <ClInclude Include="Driver\Api.hpp" />
+    <ClInclude Include="Driver\GlobalData.hpp" />
+    <ClInclude Include="Driver\KUtils.hpp" />
+    <ClInclude Include="Driver\Lazy.hpp" />
+    <ClInclude Include="Driver\Locks.hpp" />
+    <ClInclude Include="Driver\New.hpp" />
+    <ClInclude Include="Driver\NotifyRoutines.hpp" />
+    <ClInclude Include="Driver\Once.hpp" />
+    <ClInclude Include="Driver\ProcessCtx.hpp" />
+    <ClInclude Include="Driver\Rule.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Driver\DriverEntry.cpp" />
+    <ClCompile Include="Driver\KUtils.cpp" />
+    <ClCompile Include="Driver\NotifyRoutines.cpp" />
+    <ClCompile Include="Driver\ProcessCtx.cpp" />
+    <ClCompile Include="Driver\Rule.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

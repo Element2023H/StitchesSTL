@@ -78,7 +78,7 @@ namespace Stitches
 		FORCEINLINE T* ForceDefault()
 		{
 			//return reinterpret_cast<T*>(ExAllocatePoolWithTag(NonPagedPoolNx, sizeof(T), LAZY_INSTANCE_MEM));
-			return new(NonPagedPoolNx) T;
+			return new T;
 		}
 	};
 

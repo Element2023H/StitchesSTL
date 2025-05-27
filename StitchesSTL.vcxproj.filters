@@ -9,36 +9,63 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="DriverEntry.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Filter Include="Notify Routines">
+      <UniqueIdentifier>{cafec23e-1d60-4e14-a94b-1b26705f6c8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rule">
+      <UniqueIdentifier>{a5137ca4-5d86-4044-b97c-5910d6e344c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Imports.hpp">
+    <ClInclude Include="Driver\Api.hpp">
       <Filter>Base Header</Filter>
     </ClInclude>
-    <ClInclude Include="New.hpp">
+    <ClInclude Include="Driver\GlobalData.hpp">
       <Filter>Base Header</Filter>
     </ClInclude>
-    <ClInclude Include="Locks.hpp">
+    <ClInclude Include="Driver\Lazy.hpp">
       <Filter>Base Header</Filter>
     </ClInclude>
-    <ClInclude Include="Once.hpp">
+    <ClInclude Include="Driver\Locks.hpp">
       <Filter>Base Header</Filter>
     </ClInclude>
-    <ClInclude Include="Lazy.hpp">
+    <ClInclude Include="Driver\New.hpp">
       <Filter>Base Header</Filter>
     </ClInclude>
-    <ClInclude Include="GlobalData.hpp">
+    <ClInclude Include="Driver\Once.hpp">
       <Filter>Base Header</Filter>
     </ClInclude>
-    <ClInclude Include="Api.hpp">
+    <ClInclude Include="Driver\KUtils.hpp">
       <Filter>Base Header</Filter>
     </ClInclude>
+    <ClInclude Include="Driver\NotifyRoutines.hpp">
+      <Filter>Notify Routines</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\ProcessCtx.hpp">
+      <Filter>Notify Routines</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\Rule.hpp">
+      <Filter>Rule</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Driver\DriverEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\KUtils.cpp">
+      <Filter>Base Header</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\NotifyRoutines.cpp">
+      <Filter>Notify Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\ProcessCtx.cpp">
+      <Filter>Notify Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\Rule.cpp">
+      <Filter>Rule</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
