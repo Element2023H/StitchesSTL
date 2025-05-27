@@ -108,8 +108,11 @@ DriverMain(
 	rules->AddProtectProcess(wstrPtProcess);
 	rules->AddTrustProcess(wstrPtProcess);
 
-	std::wstring wstrPtDir{ L"*\\PROTECTFILE\\*" };
+	std::wstring wstrPtDir{ L"\\PROTECTFILE\\" };
 	rules->AddProtectDir(wstrPtDir);
+
+	std::wstring wstrPtRegistry{ RegistryPath->Buffer };
+	rules->AddProtectRegistry(wstrPtRegistry);
 
 	notifyRoutines->Init();
 

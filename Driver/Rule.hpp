@@ -4,6 +4,8 @@
 #include "Imports.hpp"
 #include "Lazy.hpp"
 
+
+
 class Rules
 {
 public:
@@ -21,10 +23,15 @@ public:
 	void	AddProtectDir(std::wstring& );
 	void	DelProtectDir(std::wstring& );
 	BOOLEAN IsInProtectDir(std::wstring& );
+
+	void	AddProtectRegistry(std::wstring&);
+	void	DelProtectRegistry(std::wstring&);
+	BOOLEAN IsInProtectRegistry(std::wstring&);
 private:
 	std::list<std::wstring> m_listOfProtectProcess;
 	std::list<std::wstring> m_listOfTrustProcess;
 	std::list<std::wstring> m_listOfProtectDir;
+	std::list<std::wstring> m_listOfProtectRegistry;
 };
 
 static Stitches::LazyInstance<Rules, NonPagedPoolNx> rules;
