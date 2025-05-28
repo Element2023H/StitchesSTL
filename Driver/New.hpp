@@ -3,6 +3,8 @@
 
 namespace Stitches
 {
+	constexpr ULONG KMEMORY_TAG = 'gtmK';
+
 	template <POOL_TYPE PoolType = PagedPool>
 	class KMemory
 	{
@@ -12,7 +14,7 @@ namespace Stitches
 
 		void* operator new(size_t sz) noexcept
 		{
-			void* ptr = ExAllocatePoolWithTag(PoolType, sz, KOBJ_TAG);
+			void* ptr = ExAllocatePoolWithTag(PoolType, sz, KMEMORY_TAG);
 
 			return ptr;
 		}
@@ -20,7 +22,9 @@ namespace Stitches
 		void operator delete(void* ptr, size_t sz) noexcept
 		{
 			if (ptr)
-				ExFreePoolWithTag(ptr, KOBJ_TAG);
+			{
+				ExFreePoolWithTag(ptr, KMEMORY_TAG);
+			}
 		}
 
 #pragma warning(pop)
