@@ -4,6 +4,7 @@
 #include "NotifyRoutines.hpp"
 #include "ProcessCtx.hpp"
 #include "Rule.hpp"
+#include "FileFilter.hpp"
 
 using namespace Stitches;
 
@@ -29,14 +30,6 @@ DriverUnload(PDRIVER_OBJECT DriverObject);
 VOID DriverUnload(PDRIVER_OBJECT DriverObject)
 {
 	UNREFERENCED_PARAMETER(DriverObject);
-
-	LazyInstance<NotifyRoutines, NonPagedPoolNx>::Dispose();
-
-	LazyInstance<ProcessCtx, NonPagedPoolNx>::Dispose();
-
-	LazyInstance<Rules, NonPagedPoolNx>::Dispose();
-
-	LazyInstance<GlobalData, NonPagedPoolNx>::Dispose();
 }
 
 NTSTATUS 
@@ -48,7 +41,6 @@ DriverMain(
 	UNREFERENCED_PARAMETER(RegistryPath);
 	NTSTATUS status{ STATUS_SUCCESS };
 
-	DbgBreakPoint();
 	DriverObject->DriverUnload = DriverUnload;
 
 	// initialize g_pGlobalData
@@ -115,6 +107,8 @@ DriverMain(
 	rules->AddProtectRegistry(wstrPtRegistry);
 
 	notifyRoutines->Init();
+
+	fileFilter->Init();
 
 	return status;
 }
