@@ -9,11 +9,11 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Notify Routines">
-      <UniqueIdentifier>{cafec23e-1d60-4e14-a94b-1b26705f6c8c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Rule">
       <UniqueIdentifier>{a5137ca4-5d86-4044-b97c-5910d6e344c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Filter">
+      <UniqueIdentifier>{cafec23e-1d60-4e14-a94b-1b26705f6c8c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -42,13 +42,16 @@
       <Filter>Base Header</Filter>
     </ClInclude>
     <ClInclude Include="Driver\NotifyRoutines.hpp">
-      <Filter>Notify Routines</Filter>
+      <Filter>Filter</Filter>
     </ClInclude>
     <ClInclude Include="Driver\ProcessCtx.hpp">
-      <Filter>Notify Routines</Filter>
+      <Filter>Filter</Filter>
     </ClInclude>
     <ClInclude Include="Driver\Rule.hpp">
       <Filter>Rule</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\FileFilter.hpp">
+      <Filter>Filter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -59,13 +62,16 @@
       <Filter>Base Header</Filter>
     </ClCompile>
     <ClCompile Include="Driver\NotifyRoutines.cpp">
-      <Filter>Notify Routines</Filter>
+      <Filter>Filter</Filter>
     </ClCompile>
     <ClCompile Include="Driver\ProcessCtx.cpp">
-      <Filter>Notify Routines</Filter>
+      <Filter>Filter</Filter>
     </ClCompile>
     <ClCompile Include="Driver\Rule.cpp">
       <Filter>Rule</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\FileFilter.cpp">
+      <Filter>Filter</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

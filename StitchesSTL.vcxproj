@@ -163,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Driver\Api.hpp" />
+    <ClInclude Include="Driver\FileFilter.hpp" />
     <ClInclude Include="Driver\GlobalData.hpp" />
     <ClInclude Include="Driver\KUtils.hpp" />
     <ClInclude Include="Driver\Lazy.hpp" />
@@ -175,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Driver\DriverEntry.cpp" />
+    <ClCompile Include="Driver\FileFilter.cpp" />
     <ClCompile Include="Driver\KUtils.cpp" />
     <ClCompile Include="Driver\NotifyRoutines.cpp" />
     <ClCompile Include="Driver\ProcessCtx.cpp" />
